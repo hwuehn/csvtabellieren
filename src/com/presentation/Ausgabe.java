@@ -118,8 +118,4 @@ public class Ausgabe {
                getTowns().get(2) +placeHolderLength(getMaxTown().length(),getTowns().get(2).length())+
                getAges().get(2) +placeHolderLength(getMaxAgeLength().length(),getAges().get(2).length());
     }
-
-
-
-
 }

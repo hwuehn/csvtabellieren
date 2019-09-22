@@ -3,7 +3,6 @@ package com.application;
 import com.data.StreamVerwaltung;
 import com.presentation.Ausgabe;
 
-
 public class Main {
 
     public static void main(String[] args) {
@@ -22,12 +21,5 @@ public class Main {
         show.placeHolderAges();
 
         System.out.println(show.showTable());
-
-
-
-
-
-
-
     }
 }
