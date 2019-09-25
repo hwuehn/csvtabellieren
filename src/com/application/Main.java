@@ -3,18 +3,23 @@ package com.application;
 import com.data.StreamVerwaltung;
 import com.presentation.Ausgabe;
 
-public class Main {
+import java.util.List;
 
+import static com.data.StreamVerwaltung.extrahiereString;
+
+public class Main {
+    public final static String csv = "Peter Pan;Am Hang 5;12345 Einsam;42;" +
+            "Maria Schmitz;Kölner Straße 45;50123 Köln;43;" +
+            "Paul Meier;Münchener Weg 1;87654 München;65;";
     public static void main(String[] args) {
 
-        StreamVerwaltung sv = new StreamVerwaltung();
-        sv.extrahiereString();
+        List<String> woerter = extrahiereString(csv);
 
         Ausgabe show = new Ausgabe();
-        show.createNameList(sv.getWortListe());
-        show.createStreetList(sv.getWortListe());
-        show.createTownList(sv.getWortListe());
-        show.createAgeList(sv.getWortListe());
+        show.createNameList(woerter);
+        show.createStreetList(woerter);
+        show.createTownList(woerter);
+        show.createAgeList(woerter);
         show.placeHolderNames();
         show.placeHolderStreets();
         show.placeHolderTowns();
